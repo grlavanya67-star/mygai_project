@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GuardianAI - Text Detection</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            width: 420px;
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: #2a5298;
+        }
+
+        button {
+            margin-top: 18px;
+            width: 100%;
+            padding: 12px;
+            background: #1e3c72;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #2a5298;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>GuardianAI</h1>
+    <p>Real-Time Bad Comment Detection System</p>
+
+    <form action="/predict" method="post">
+        <input type="text" name="comment" placeholder="Enter a comment here..." required>
+        <button type="submit">Detect Comment</button>
+    </form>
+
+    <!-- Result will appear here -->
+    <div class="result">
+        {{ result }}
+    </div>
+
+    <div class="footer">
+        AI Content Moderation Project
+    </div>
+</div>
+
+</body>
+</html>
