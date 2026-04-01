@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Result</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="title">GuardianAI Result</h1>
+
+<div class="result-card">
+
+<h2 class="{% if decision == 'ALLOWED' %}safe{% elif decision == 'BLOCKED' %}blocked{% else %}suspicious{% endif %}">
+{{ decision }}
+</h2>
+
+<p class="msg">{{ text }}</p>
+
+<p><b>Reason:</b> {{ reason }}</p>
+<p><b>Risk Level:</b> {{ risk }}</p>
+<p><b>AI Accuracy:</b> {{ accuracy }}</p>
+
+<a href="/"><button class="btn">Check Another</button></a>
+
+</div>
+
+</div>
+
+</body>
+</html>
