@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="title">GuardianAI – Smart Cyberbullying Detection System</h1>
+<p class="subtitle">Protecting Students from Harmful Messages and Images Using AI</p>
+
+
+<div class="card">
+
+<h2>Scan a Message</h2>
+
+<form action="/scan_text" method="POST">
+
+<textarea name="text" placeholder="Type a message to check if it is safe or harmful"></textarea>
+
+<br>
+
+<button class="btn">Scan Message</button>
+
+</form>
+
+</div>
+
+
+<div class="card">
+
+<h2>Scan an Image</h2>
+
+<form action="/scan_image" method="POST" enctype="multipart/form-data">
+
+<input type="file" name="image" required>
+
+<br>
+
+<button class="btn">Scan Image</button>
+
+</form>
+
+</div>
+
+
+<div class="card">
+
+<h2>Security Records</h2>
+
+<p>You can also view all harmful content stored securely using blockchain.</p>
+
+<a href="/blockchain">
+<button class="btn">View Blockchain Records</button>
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
